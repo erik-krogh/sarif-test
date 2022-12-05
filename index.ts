@@ -2,7 +2,7 @@ import * as Sarif from "sarif";
 import * as fs from "fs";
 
 async function main(outFile: string) {
-  // makes a fake Sarif log that reports error on the below line. (Line 6, column 3 to column 8)
+  // makes a fake Sarif log that reports error on this line. (Line 5, column 3 to column 93)
   const log: Sarif.Log = { // <- written using Copilot
     version: "2.1.0",
     runs: [
