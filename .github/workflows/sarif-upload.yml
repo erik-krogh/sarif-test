@@ -9,9 +9,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
       - name: Run script
-        run: | 
+        run: |
           npm ci
           npx --package=ts-node -y ts-node index.ts out.sarif
       - name: Upload SARIF
