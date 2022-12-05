@@ -37,9 +37,9 @@ async function main(outFile: string) {
                     uri: "index.ts",
                   },
                   region: {
-                    startLine: 6,
+                    startLine: 5,
                     startColumn: 3,
-                    endColumn: 8,
+                    endColumn: 93,
                   },
                 },
               },
