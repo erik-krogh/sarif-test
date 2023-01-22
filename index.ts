@@ -28,7 +28,7 @@ async function main(outFile: string) {
             ruleId: "MyRule",
             level: "error",
             message: {
-              // text: "My message",
+              text: "My message",
               markdown: "My message **markdown** __formatting__ [link](https://www.example.com)",
             },
             locations: [
