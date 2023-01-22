@@ -2,7 +2,7 @@ import * as Sarif from "sarif";
 import * as fs from "fs";
 
 async function main(outFile: string) {
-  // makes a fake Sarif log that reports error on this exact line. (Line 4, column 7 to 12)
+  // makes a fake Sarif log that reports error on this line. (Line 5, column 3 to column 93)
   const log: Sarif.Log = { // <- written using Copilot
     version: "2.1.0",
     runs: [
@@ -29,6 +29,7 @@ async function main(outFile: string) {
             level: "error",
             message: {
               text: "My message",
+              markdown: "My message **markdown** __formatting__ [link](https://www.example.com)",
             },
             locations: [
               {
@@ -37,10 +38,9 @@ async function main(outFile: string) {
                     uri: "index.ts",
                   },
                   region: {
-                    startLine: 4,
-                    endLine: 4,
-                    startColumn: 7,
-                    endColumn: 12,
+                    startLine: 5,
+                    startColumn: 3,
+                    endColumn: 93,
                   },
                 },
               },
